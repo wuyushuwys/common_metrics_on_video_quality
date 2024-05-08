@@ -27,7 +27,7 @@ class Evaluator:
         assert len(self.fake_video_list) > 0
         assert len(self.reak_video_list) > 0
 
-        if random_sample:
+        if random_sample or len(self.reak_video_list) < len(self.fake_video_list):
             self.reak_video_list = random.sample(self.reak_video_list, len(self.fake_video_list))
         else:
             self.reak_video_list = self.reak_video_list[:len(self.fake_video_list)]
